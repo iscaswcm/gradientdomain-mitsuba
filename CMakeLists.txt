@@ -2,6 +2,8 @@
 # Tested only on Windows and Linux (Ubuntu 10.10)
 cmake_minimum_required(VERSION 2.8.3 FATAL_ERROR)
 
+#disable "Policy CMP0069 is not set" warnings
+cmake_policy(SET CMP0069 NEW)
 # Internal variable to know whether this is the first time CMake runs
 if (NOT DEFINED MTS_CMAKE_INIT)
   set(MTS_CMAKE_INIT ON CACHE INTERNAL "Is this the initial CMake run?")
